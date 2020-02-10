@@ -5,8 +5,16 @@ import Avatar from './Avatar';
 import Person from "../Model/Person";
 
 class PersonItem extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+            online: this.props.person.online
+        };
+    }
+
     render() {
-        let onlineStatus = this.props.person.online ?'online' :'offline';
+        let onlineStatus = this.state.online ?'online' :'offline';
 
         return (
             <div className="person-item">
@@ -14,10 +22,19 @@ class PersonItem extends React.Component {
 
                 <div>
                     <h4>{this.props.person.name}</h4>
-                    <p className={`onlineStatus ${onlineStatus}`}>{onlineStatus}</p>
+                    <p
+                        className={`onlineStatus ${onlineStatus}`}
+                        onClick={this.handleOnlineStatusClick.bind(this)}
+                    >{onlineStatus}</p>
                 </div>
             </div>
         );
+    }
+
+    handleOnlineStatusClick() {
+        this.setState({
+            online: !this.state.online
+        });
     }
 }
 

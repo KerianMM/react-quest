@@ -18,6 +18,9 @@ body {
   margin: 0;
 }
 
+.person-item .onlineStatus {
+  cursor: pointer;
+}
 .person-item .onlineStatus:before {
   content: "•";
   vertical-align: -12%;
