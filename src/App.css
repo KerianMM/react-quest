@@ -10,11 +10,25 @@ body {
   display: flex;
   border-radius: 2px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
 }
 
 .person-item h4,
 .person-item p {
   margin: 0;
+}
+
+.person-item .onlineStatus:before {
+  content: "•";
+  vertical-align: -12%;
+  margin-right: 0.25rem;
+  font-size: 1.5rem;
+}
+.person-item .onlineStatus.online:before {
+  color: green;
+}
+.person-item .onlineStatus.offline:before {
+  color: red;
 }
 
 .avatar {
