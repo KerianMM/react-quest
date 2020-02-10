@@ -4,7 +4,7 @@ import PersonItem from "./PersonItem";
 
 class Contacts extends Component {
     render() {
-        return this.props.contacts.map(contact => <PersonItem person={contact}/>);
+        return this.props.contacts.map(contact => <PersonItem key={contact.id} person={contact}/>);
     }
 }
 
