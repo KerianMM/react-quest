@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Contacts from "./Components/Contacts";
 import Person from "./Model/Person";
-import ClickEventListener from "./EventListener/ClickEventListener";
 
 function App() {
     let contacts = [
@@ -14,7 +13,6 @@ function App() {
     return (
         <div>
             <Contacts contacts={contacts}/>
-            {ClickEventListener()}
         </div>
     );
 }
