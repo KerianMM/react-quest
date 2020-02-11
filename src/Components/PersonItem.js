@@ -24,18 +24,18 @@ class PersonItem extends React.Component {
                     <h4>{this.props.person.name}</h4>
                     <p
                         className={`onlineStatus ${onlineStatus}`}
-                        onClick={this.handleOnlineStatusClick.bind(this)}
+                        onClick={this.handleOnlineStatusClick}
                     >{onlineStatus}</p>
                 </div>
             </div>
         );
     }
-
-    handleOnlineStatusClick() {
+    
+    handleOnlineStatusClick = () => {
         this.setState({
             online: !this.state.online
         });
-    }
+    };
 }
 
 PersonItem.propTypes = {
