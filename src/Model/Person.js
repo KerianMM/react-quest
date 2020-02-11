@@ -3,6 +3,7 @@ class Person {
         this.id = Person.generateId();
         this.name   = name;
         this.avatar = avatar;
+        this.quote  = null;
         this.online = online;
     }
 

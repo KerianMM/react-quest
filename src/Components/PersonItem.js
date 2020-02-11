@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Avatar from './Avatar';
 import Person from "../Model/Person";
+import Quote from "./Quote";
 
 class PersonItem extends React.Component {
     constructor(props, context) {
@@ -26,6 +27,7 @@ class PersonItem extends React.Component {
                         className={`onlineStatus ${onlineStatus}`}
                         onClick={this.handleOnlineStatusClick}
                     >{onlineStatus}</p>
+                    <Quote person={this.props.person}/>
                 </div>
             </div>
         );
@@ -39,7 +41,7 @@ class PersonItem extends React.Component {
 }
 
 PersonItem.propTypes = {
-    person: PropTypes.instanceOf(Person)
+    person: PropTypes.instanceOf(Person).isRequired
 };
 
 export default PersonItem;

@@ -13,7 +13,7 @@ class Avatar extends React.Component {
 }
 
 Avatar.propTypes = {
-    person: PropTypes.instanceOf(Person)
+    person: PropTypes.instanceOf(Person).isRequired
 };
 
 export default Avatar;
