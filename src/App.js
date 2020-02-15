@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Contacts from "./Components/Contacts";
+import Contacts from "./Components/Contacts/Contacts";
 import getAll from "./DataProvider/Person/getAll";
 
 function App() {
